@@ -1,9 +1,70 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-:root {
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: For smoother element-level transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+@layer base {
+
+  * {
+    font-family: 'Plus Jakarta Sans', 'Product Sans', sans-serif;
+  }
+}
+
+
+@font-face {
+  font-family: 'Product Sans';
+  src: url('/fonts/Product-Sans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Product Sans';
+  src: url('/fonts/Product-Sans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Product Sans';
+  src: url('/fonts/Product-Sans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Product Sans';
+  src: url('/fonts/Product-Sans-Bold-Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+.font-product-sans {
+  font-family: 'Product Sans', Arial, Helvetica, sans-serif;
+}
+
+/* @layer base {
+  * {
+    font-family: 'Plus Jakarta Sans', 'Product Sans', Arial, Helvetica, sans-serif;
+  }
+} */
+
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -12,15 +73,45 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
-body {
+
+/* body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* Hide scrollbar utility class */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  background: transparent;
+
 }
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom scrollbar utility class for transparent track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 8px;
+}
+.custom-scrollbar {
+  scrollbar-color: #bdbdbd transparent;
+  scrollbar-width: thin;
+}
+
