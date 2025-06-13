@@ -62,16 +62,16 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-white dark:bg-[#0A0A0B] relative overflow-x-hidden">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-white dark:bg-[#0A0A0B] relative overflow-x-hidden px-2 sm:px-4">
       <Nav />
       <div className="flex flex-col items-center w-full">
         <div
-          className={`transition-opacity duration-500 ${submitted ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+          className={`transition-opacity duration-500 ${submitted ? "opacity-0 pointer-events-none" : "opacity-100 flex flex-col justify-center items-center"}`}
         >
-          <h1 className="font-product-sans text-5xl font-bold select-none text-[#1a1a1a] dark:text-white tracking-tighter text-center">
-            What's in your mind today?
+          <h1 className="font-product-sans text-3xl sm:text-4xl md:text-5xl font-bold select-none text-[#1a1a1a] dark:text-white tracking-tighter text-center">
+            What's in your <span className="text-[#0063FF] dark:text-[#2F70ED]">mind</span> today?
           </h1>
-          <p className="text-gray-400 text-center dark:text-white">
+          <p className="w-2/3 sm:w-full text-gray-400 text-center dark:text-white text-sm sm:text-base">
             click on settings option to choose different types of prompt
           </p>
         </div>
@@ -89,7 +89,7 @@ export default function Home() {
               />
             </div>
           ) : improvedPrompt && (
-            <div className="mb-4 max-w-4xl text-lg text-left animate-fade-in flex flex-col items-start gap-2 justify-start text-[#1a1a1a] dark:text-white">
+            <div className="mb-4 w-full max-w-4xl text-base sm:text-lg text-left animate-fade-in flex flex-col items-start gap-2 justify-start text-[#1a1a1a] dark:text-white px-2 sm:px-0">
               <div className="w-full font-product-sans">{improvedPrompt}</div>
               <div className="w-4 h-4 flex items-center justify-center mt-2">
                 <div className="relative">
@@ -117,31 +117,31 @@ export default function Home() {
           )}
         </div>
 
-        <div className="w-full max-w-4xl h-40 relative" style={{ minHeight: '15rem' }}>
+        <div className="w-full max-w-4xl h-40 relative px-0 sm:px-4" style={{ minHeight: '15rem' }}>
           <form
             onSubmit={handleSubmit}
             className={`absolute left-1/2 w-full max-w-4xl flex flex-col items-center transition-all duration-700
-              ${submitted ? 'fixed bottom-10 translate-y-0' : 'top-0 translate-y-0'}
-              -translate-x-1/2 z-20`
+              ${submitted ? 'fixed bottom-4 sm:bottom-10 translate-y-0' : 'top-0 translate-y-0'}
+              -translate-x-1/2 z-20 px-2 sm:px-0`
             }
             style={{
               transitionProperty: 'all',
             }}
           >
-            <div className="w-full h-40 rounded-3xl bg-[#F4F4F4] dark:bg-[#131313] border border-[#ececec] dark:border-[#252525] p-4 flex flex-col justify-between">
+            <div className="w-full h-40 rounded-3xl bg-[#F4F4F4] dark:bg-[#131313] border border-[#ececec] dark:border-[#252525] p-2 sm:p-4 flex flex-col justify-between">
               <textarea
-                className="w-full h-full text-lg text-[#303030] dark:text-white focus:outline-none resize-none placeholder:text-[#838383] dark:placeholder:text-white/35 bg-transparent font-product-sans custom-scrollbar"
+                className="w-full h-full text-base sm:text-lg text-[#303030] dark:text-white focus:outline-none resize-none placeholder:text-[#838383] dark:placeholder:text-white/35 bg-transparent font-product-sans custom-scrollbar"
                 placeholder="Ask Anything....."
                 value={userPrompt}
                 onChange={(e) => setUserPrompt(e.target.value)}
                 disabled={loading}
               />
-              <div className="w-full flex justify-end items-center gap-2">
+              <div className="w-full flex justify-end items-center gap-2 mt-2">
                 <div className="relative" ref={dropdownRef}>
                   <button
                     type="button"
                     aria-label="Settings"
-                    className="bg-white rounded-xl p-3  hover:bg-gray-100 transition border border-gray-200 cursor-pointer"
+                    className="bg-white rounded-xl p-3 hover:bg-gray-100 transition border border-gray-200 cursor-pointer"
                     onClick={() => setDropdownOpen((v) => !v)}
                     disabled={loading}
                   >
@@ -149,7 +149,7 @@ export default function Home() {
                   </button>
                   {dropdownOpen && (
                     <div
-                      className={`absolute ${submitted ? "bottom-full mb-2" : "top-full mt-2"} right-0 w-48 bg-white dark:bg-[#1a1a1a] rounded-2xl border border-gray-100 dark:border-white/10 z-20 p-2 pb-1 shadow-lg overflow-y-auto max-h-56 hide-scrollbar`}
+                      className={`absolute ${submitted ? "bottom-full mb-2" : "top-full mt-2"} right-0 w-52 sm:w-48 bg-white dark:bg-[#1a1a1a] rounded-2xl border border-gray-100 dark:border-white/10 z-20 p-2 pb-1 shadow-lg overflow-y-auto max-h-56 hide-scrollbar`}
                     >
                       {MODES.map((m) => (
                         <button
@@ -172,7 +172,7 @@ export default function Home() {
                 <button
                   type="submit"
                   aria-label="Send"
-                  className="bg-[#0063FF] dark:bg-[#2F70ED] hover:bg-[#0059E5] text-white rounded-xl p-3  transition flex items-center justify-center cursor-pointer"
+                  className="bg-[#0063FF] dark:bg-[#2F70ED] hover:bg-[#0059E5] text-white rounded-xl p-3 transition flex items-center justify-center cursor-pointer"
                   disabled={loading}
                 >
                   <Send size={20} />
