@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import Nav from "./components/nav";
+import Nav from "./components/Nav";
 import { Settings, Send, Image, Video, User, UserRound, Settings2, Panda, Copy, CopyCheck, Frame, Palette, Smile, Check } from "lucide-react";
 import Lottie from "lottie-react";
 import animationData from "../../public/Animation - 1746788619944.json";
