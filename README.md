@@ -2,7 +2,7 @@
 
 ![BetterWritePrompt Preview](./public/og-image.png)
 
-*Enhance your prompts—create better image, video, avatar, character, poster, logo prompts and more.*
+*Enhance your prompts, create better image, video, avatar, character, poster, logo prompts and more.*
 
 ![last-commit](https://img.shields.io/github/last-commit/Somraj-234/betterwriteprompt?style=flat&logo=git&logoColor=white&color=0080ff)
 ![top-language](https://img.shields.io/github/languages/top/Somraj-234/betterwriteprompt?style=flat&color=0080ff)
@@ -30,7 +30,7 @@
 
 ## 📈 Overview
 
-**BetterWritePrompt** is a modern web tool designed to help creators, designers, and developers craft powerful prompts for generative AI tools. Whether you're working with images, videos, avatars, characters, posters, or logos — this tool enhances your creativity by refining and optimizing your prompt structure.
+**BetterWritePrompt** is a modern web tool designed to help creators, designers, and developers craft powerful prompts for generative AI tools. Whether you're working with images, videos, avatars, characters, posters, or logos this tool enhances your creativity by refining and optimizing your prompt structure.
 
 ---
 
