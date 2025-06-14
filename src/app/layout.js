@@ -20,7 +20,7 @@ export const metadata = {
     siteName: 'Better Write Prompt',
     images: [
       {
-        url: 'https://better-write-prompt.vercel.app/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Better Write Prompt Preview',
@@ -33,7 +33,14 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Better Write Prompt - AI Prompt Enhancement Tool',
     description: 'Enhance your AI prompts with Better Write Prompt. Get improved prompts for images, videos, avatars, and more. Make your AI generations better with optimized prompts.',
-    images: ['https://better-write-prompt.vercel.app/og-image.png'],
+    images: ['/og-image.png'],
+  },
+  other: {
+    'og:image': '/og-image.png',
+    'og:image:width': '1200',
+    'og:image:height': '630',
+    'og:image:type': 'image/png',
+    'og:image:alt': 'Better Write Prompt Preview',
   },
   robots: {
     index: true,
@@ -43,9 +50,7 @@ export const metadata = {
     width: 'device-width',
     initialScale: 1,
   },
-  verification: {
-    google: 'your-google-site-verification', // Add your Google Search Console verification code
-  },
+
 };
 
 export default function RootLayout({ children }) {
