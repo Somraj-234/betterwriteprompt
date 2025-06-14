@@ -20,7 +20,7 @@ export const metadata = {
     siteName: 'Better Write Prompt',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://better-write-prompt.vercel.app/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Better Write Prompt Preview',
@@ -33,10 +33,10 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Better Write Prompt - AI Prompt Enhancement Tool',
     description: 'Enhance your AI prompts with Better Write Prompt. Get improved prompts for images, videos, avatars, and more. Make your AI generations better with optimized prompts.',
-    images: ['/og-image.png'],
+    images: ['https://better-write-prompt.vercel.app/og-image.png'],
   },
   other: {
-    'og:image': '/og-image.png',
+    'og:image': 'https://better-write-prompt.vercel.app/og-image.png',
     'og:image:width': '1200',
     'og:image:height': '630',
     'og:image:type': 'image/png',
