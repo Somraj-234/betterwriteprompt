@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BetterWritePrompt
 
-## Getting Started
+![BetterWritePrompt Preview](/og-image.png)
 
-First, run the development server:
+*Enhance your prompts—create better image, video, avatar, character, poster, logo prompts and more.*
+
+![last-commit](https://img.shields.io/github/last-commit/Somraj-234/betterwriteprompt?style=flat&logo=git&logoColor=white&color=0080ff)
+![top-language](https://img.shields.io/github/languages/top/Somraj-234/betterwriteprompt?style=flat&color=0080ff)
+![language-count](https://img.shields.io/github/languages/count/Somraj-234/betterwriteprompt?style=flat&color=0080ff)
+
+### 🚀 Built with
+
+![Next.js](https://img.shields.io/badge/Next.js-000000.svg?style=flat&logo=Next.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)
+
+---
+
+## 📌 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## 📈 Overview
+
+**BetterWritePrompt** is a modern web tool designed to help creators, designers, and developers craft powerful prompts for generative AI tools. Whether you're working with images, videos, avatars, characters, posters, or logos — this tool enhances your creativity by refining and optimizing your prompt structure.
+
+---
+
+## ✨ Features
+
+- 🧠 **Prompt Templates by Category** – Choose from image, video, avatar, character, poster, logo, etc.
+- ✍️ **AI-Powered Refinement** – Improve clarity, structure, and relevance of your prompts.
+- ⚡ **Real-Time Editing** – Instantly view optimized prompts as you type.
+- 🎨 **Tailwind-Powered UI** – Clean, responsive, and fast user interface.
+- 📤 **Export Options** – Copy or save your prompts effortlessly.
+
+---
+
+## 🛠 Getting Started
+
+### Prerequisites
+
+- Node.js `v16` or higher
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/Somraj-234/betterwriteprompt.git
+cd betterwriteprompt
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
+```
+
+---
+
+### Usage
+
+Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open your browser and go to:  
+[http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contributing
 
-## Learn More
+Contributions are welcome!  
+Feel free to open issues or submit pull requests for any improvements or features.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the [MIT License](LICENSE).
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[⬆ Return to top](#betterwriteprompt)
