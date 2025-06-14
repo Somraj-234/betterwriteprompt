@@ -6,7 +6,7 @@ import { useTheme } from "../context/Theme";
 function Nav() {
   const { theme, toggleTheme } = useTheme();
   return (
-    <div className="nav w-full h-20 sm:h-20 pt-4 bg-transparent border-b border-white/10 dark:border-white/10 fixed top-0 left-0 right-0 z-50">
+    <div className="nav w-full h-20 sm:h-20 pt-4 bg-white dark:bg-[#0A0A0B] border-b border-black/5 dark:border-white/5 fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center justify-between gap-4 bg-transparent border-white/10 text-black pb-4 sm:px-16 px-4">
         <div className="logo">
           <div className="cursor-pointer flex items-center text-lg sm:text-xl font-bold font-product-sans italic tracking-tighter text-black dark:text-white">

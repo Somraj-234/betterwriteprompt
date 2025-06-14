@@ -1,18 +1,49 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Nav from "./components/Nav";
-import { Settings, Send, Image, Video, User, UserRound, Settings2, Panda, Copy, CopyCheck, Frame, Palette, Smile, Check } from "lucide-react";
+import {
+  Settings,
+  Send,
+  Image,
+  Video,
+  User,
+  UserRound,
+  Settings2,
+  Panda,
+  Copy,
+  CopyCheck,
+  Frame,
+  Palette,
+  Smile,
+  Check,
+} from "lucide-react";
 import Lottie from "lottie-react";
 import animationData from "../../public/Animation - 1746788619944.json";
 
 const MODES = [
   { key: "image", label: "image", icon: <Image size={20} className="mr-2" /> },
   { key: "video", label: "video", icon: <Video size={20} className="mr-2" /> },
-  { key: "avatar", label: "avatar", icon: <Panda size={20} className="mr-2" /> },
-  { key: "character", label: "character", icon: <UserRound size={20} className="mr-2" /> },
-  { key: "poster", label: "poster", icon: <Palette size={20} className="mr-2" /> },
+  {
+    key: "avatar",
+    label: "avatar",
+    icon: <Panda size={20} className="mr-2" />,
+  },
+  {
+    key: "character",
+    label: "character",
+    icon: <UserRound size={20} className="mr-2" />,
+  },
+  {
+    key: "poster",
+    label: "poster",
+    icon: <Palette size={20} className="mr-2" />,
+  },
   { key: "logo", label: "logo", icon: <Frame size={20} className="mr-2" /> },
-  { key: "meme_parody", label: "meme parody", icon: <Smile size={20} className="mr-2" /> },
+  {
+    key: "meme_parody",
+    label: "meme parody",
+    icon: <Smile size={20} className="mr-2" />,
+  },
 ];
 
 export default function Home() {
@@ -66,10 +97,16 @@ export default function Home() {
       <Nav />
       <div className="flex flex-col items-center w-full">
         <div
-          className={`transition-opacity duration-500 ${submitted ? "opacity-0 pointer-events-none" : "opacity-100 flex flex-col justify-center items-center"}`}
+          className={`transition-opacity duration-500 ${
+            submitted
+              ? "opacity-0 pointer-events-none"
+              : "opacity-100 flex flex-col justify-center items-center"
+          }`}
         >
           <h1 className="font-product-sans text-3xl sm:text-4xl md:text-5xl font-bold select-none text-[#1a1a1a] dark:text-white tracking-tighter text-center">
-            What's in your <span className="text-[#0063FF] dark:text-[#2F70ED]">mind</span> today?
+            What's in your{" "}
+            <span className="text-[#0063FF] dark:text-[#2F70ED]">mind</span>{" "}
+            today?
           </h1>
           <p className="w-2/3 sm:w-full text-gray-400 text-center dark:text-white text-sm sm:text-base">
             click on settings option to choose different types of prompt
@@ -77,8 +114,12 @@ export default function Home() {
         </div>
 
         <div
-          className={`w-full flex flex-col items-center transition-all duration-700 ${submitted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}`}
-          style={{ minHeight: '3rem' }}
+          className={`w-full flex flex-col items-center transition-all duration-700 ${
+            submitted
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10 pointer-events-none"
+          }`}
+          style={{ minHeight: "3rem" }}
         >
           {loading ? (
             <div className="flex items-center justify-center mb-8 animate-fade-in">
@@ -88,44 +129,52 @@ export default function Home() {
                 style={{ width: 100, height: 100 }}
               />
             </div>
-          ) : improvedPrompt && (
-            <div className="mb-4 w-full max-w-4xl text-base sm:text-lg text-left animate-fade-in flex flex-col items-start gap-2 justify-start text-[#1a1a1a] dark:text-white px-2 sm:px-0">
-              <div className="w-full font-product-sans">{improvedPrompt}</div>
-              <div className="w-4 h-4 flex items-center justify-center mt-2">
-                <div className="relative">
-                  {copied ? (
-                    <Check 
-                      className="text-[#1a1a1a] dark:text-white cursor-pointer absolute top-0 left-0 transition-all duration-300 ease-in-out transform scale-100 opacity-100" 
-                      size={20}
-                    />
-                  ) : (
-                    <Copy
-                      className="text-[#1a1a1a] dark:text-white hover:text-[#0063FF] dark:hover:text-[#2F70ED] cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-110 active:scale-95"
-                      size={20}
-                      onClick={() => {
-                        navigator.clipboard.writeText(improvedPrompt);
-                        setCopied(true);
-                        setTimeout(() => {
-                          setCopied(false);
-                        }, 2000);
-                      }}
-                    />
-                  )}
+          ) : (
+            improvedPrompt && (
+              <div className="mb-4 w-full max-w-4xl text-base sm:text-lg text-left animate-fade-in flex flex-col items-start gap-2 justify-start text-[#1a1a1a] dark:text-white px-2 sm:px-0">
+                <div className="w-full font-product-sans">{improvedPrompt}</div>
+                <div className="w-4 h-4 flex items-center justify-center mt-2">
+                  <div className="relative">
+                    {copied ? (
+                      <Check
+                        className="text-[#1a1a1a] dark:text-white cursor-pointer absolute top-0 left-0 transition-all duration-300 ease-in-out transform scale-100 opacity-100"
+                        size={20}
+                      />
+                    ) : (
+                      <Copy
+                        className="text-[#1a1a1a] dark:text-white hover:text-[#0063FF] dark:hover:text-[#2F70ED] cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-110 active:scale-95"
+                        size={20}
+                        onClick={() => {
+                          navigator.clipboard.writeText(improvedPrompt);
+                          setCopied(true);
+                          setTimeout(() => {
+                            setCopied(false);
+                          }, 2000);
+                        }}
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
+            )
           )}
         </div>
 
-        <div className="w-full max-w-4xl h-40 relative px-0 sm:px-4" style={{ minHeight: '15rem' }}>
+        <div
+          className="w-full max-w-4xl h-40 relative px-0 sm:px-4"
+          style={{ minHeight: "15rem" }}
+        >
           <form
             onSubmit={handleSubmit}
             className={`absolute left-1/2 w-full max-w-4xl flex flex-col items-center transition-all duration-700
-              ${submitted ? 'fixed bottom-4 sm:bottom-10 translate-y-0' : 'top-0 translate-y-0'}
-              -translate-x-1/2 z-20 px-2 sm:px-0`
-            }
+              ${
+                submitted
+                  ? "fixed bottom-4 sm:bottom-10 translate-y-0"
+                  : "top-0 translate-y-0"
+              }
+              -translate-x-1/2 z-20 px-2 sm:px-0`}
             style={{
-              transitionProperty: 'all',
+              transitionProperty: "all",
             }}
           >
             <div className="w-full h-40 rounded-3xl bg-[#F4F4F4] dark:bg-[#131313] border border-[#ececec] dark:border-[#252525] p-2 sm:p-4 flex flex-col justify-between">
@@ -149,13 +198,19 @@ export default function Home() {
                   </button>
                   {dropdownOpen && (
                     <div
-                      className={`absolute ${submitted ? "bottom-full mb-2" : "top-full mt-2"} right-0 w-52 sm:w-48 bg-white dark:bg-[#1a1a1a] rounded-2xl border border-gray-100 dark:border-white/10 z-20 p-2 pb-1 shadow-lg overflow-y-auto max-h-56 hide-scrollbar`}
+                      className={`absolute ${
+                        submitted ? "bottom-full mb-2" : "top-full mt-2"
+                      } right-0 w-52 sm:w-56 bg-white dark:bg-[#1a1a1a] rounded-2xl border border-gray-100 dark:border-white/10 z-20 p-4 shadow-lg overflow-y-auto max-h-56 hide-scrollbar `}
                     >
                       {MODES.map((m) => (
                         <button
                           key={m.key}
                           type="button"
-                          className={`flex items-center w-full px-4 py-2 text-lefthover:bg-gray-100 dark:hover:bg-white/15 transition rounded-xl ${mode === m.key ? "bg-gray-100 dark:bg-white font-semibold dark:text-black text-white" : "text-[#777777] dark:text-white/65"}`}
+                          className={`flex items-center w-full px-4 py-2 text-lefthover:bg-[#F4F4F4] hover:bg-[#f8f8f8] dark:hover:bg-white/15 transition rounded-2xl font-product-sans text-lg cursor-pointer ${
+                            mode === m.key
+                              ? "bg-[#F4F4F4]  text-[#0063FF]"
+                              : "text-[#7e7e7e] "
+                          }`}
                           onClick={() => {
                             setMode(m.key);
                             setDropdownOpen(false);
@@ -181,6 +236,11 @@ export default function Home() {
             </div>
           </form>
         </div>
+      </div>
+      <div className="absolute bottom-0 left-4 w-full h-10 flex justify-start">
+        <p className="text-sm text-[#1a1a1a] dark:text-white font-product-sans">
+          Built with 💙 by <a href="https://somraj.vercel.app/" className="text-[#0063FF] dark:text-[#2F70ED] font-bold underline">Somraj</a>
+        </p>
       </div>
     </div>
   );
