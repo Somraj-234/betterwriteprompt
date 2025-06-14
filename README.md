@@ -1,6 +1,6 @@
 # BetterWritePrompt
 
-![BetterWritePrompt Preview](/og-image.png)
+![BetterWritePrompt Preview](./public/og-image.png)
 
 *Enhance your prompts—create better image, video, avatar, character, poster, logo prompts and more.*
 
