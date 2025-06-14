@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-og": "node scripts/generate-og-image.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
@@ -14,7 +15,8 @@
     "lucide-react": "^0.514.0",
     "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sharp": "^0.32.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
