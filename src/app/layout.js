@@ -32,13 +32,6 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Better Write Prompt - AI Prompt Enhancement Tool",
-    description:
-      "Enhance your AI prompts with Better Write Prompt. Get improved prompts for images, videos, avatars, and more. Make your AI generations better with optimized prompts.",
-    image: "https://betterwriteprompt.vercel.app/og-image.png", // CHANGED from images to image
-  },
   other: {
     "og:image": "https://betterwriteprompt.vercel.app/og-image.png",
     "og:image:width": "1200",
