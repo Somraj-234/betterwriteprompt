@@ -59,6 +59,55 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${plusJakartaSans.variable} antialiased `}>
+      <head>
+        <title>Better Write Prompt - AI Prompt Enhancement Tool</title>
+        <meta
+          name="description"
+          content="Enhance your AI prompts with Better Write Prompt. Get improved prompts for images, videos, avatars, and more. Make your AI generations better with optimized prompts."
+        />
+        <meta
+          name="keywords"
+          content="AI prompt, prompt enhancement, image generation, video generation, avatar creation, AI tools"
+        />
+        <meta
+          property="og:title"
+          content="Better Write Prompt - AI Prompt Enhancement Tool"
+        />
+        <meta
+          property="og:description"
+          content="Enhance your AI prompts with Better Write Prompt. Get improved prompts for images, videos, avatars, and more. Make your AI generations better with optimized prompts."
+        />
+        <meta
+          property="og:url"
+          content="https://betterwriteprompt.vercel.app/"
+        />
+        <meta property="og:site_name" content="Better Write Prompt" />
+        <meta
+          property="og:image"
+          content="https://betterwriteprompt.vercel.app/og-image.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:alt" content="Better Write Prompt Preview" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Better Write Prompt - AI Prompt Enhancement Tool"
+        />
+        <meta
+          name="twitter:description"
+          content="Enhance your AI prompts with Better Write Prompt. Get improved prompts for images, videos, avatars, and more. Make your AI generations better with optimized prompts."
+        />
+        <meta
+          name="twitter:image"
+          content="https://betterwriteprompt.vercel.app/og-image.png"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
